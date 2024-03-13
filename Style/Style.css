@@ -1,0 +1,162 @@
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(../Fonts/SpaceGrotesk-Medium.ttf);
+}
+* {
+  font-family: SpaceGrotesk;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #dad6d6;
+  overflow: hidden;
+}
+#clock {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #1b1a1d;
+}
+#border {
+  width: 420px;
+  height: 420px;
+  background: transparent;
+  position: absolute;
+  top: 37px;
+  left: 37px;
+  border-radius: 50%;
+}
+/*Hands*/
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+#hour-hand {
+  background-color: #dad6d6;
+  width: 5px;
+  height: 25%;
+}
+#minute-hand {
+  background-color: #dad6d6;
+  width: 5px;
+  height: 35%;
+}
+#second-hand {
+  background-color: #f1bd07;
+  width: 3px;
+  height: 40%;
+}
+/*Hours*/
+#numbers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.hour {
+  color: #dad6d6;
+  font-size: 30px;
+}
+.minute {
+  color: #ff5c39;
+  font-size: 20px;
+}
+
+/**/
+#center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: #dad6d6;
+  border-radius: 50%;
+  z-index: 1000;
+}
+/* Footer*/
+footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1a1d;
+}
+#footer-ul {
+  display: flex;
+  margin: 20px 0;
+  padding: 0;
+}
+#footer-ul li {
+  margin: 0 20px;
+  list-style: none;
+  font-size: 1.2em;
+}
+
+#tea {
+  color: #dad6d6;
+}
+@media screen and (max-width: 600px) {
+  #clock {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #clock {
+    width: 300px;
+    height: 300px;
+  }
+  .hour {
+    font-size: 18px;
+  }
+  .minute {
+    font-size: 15px;
+  }
+  #center {
+    width: 20px;
+    height: 20px;
+  }
+  #hour-hand {
+    width: 4px;
+  }
+  #minute-hand {
+    width: 4px;
+  }
+  #second-hand {
+    width: 3px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  footer {
+    width: calc(100% - 20px);
+    padding: 10px;
+  }
+  #footer-ul {
+    margin: 15px 0;
+  }
+  #footer-ul li {
+    margin: 0 10px;
+    font-size: 1.2em;
+  }
+}
